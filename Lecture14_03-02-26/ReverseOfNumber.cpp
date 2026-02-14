@@ -1,14 +1,14 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-    int N;
-    cin>>N;
-    int Reverse=0;
-    while(N){
-        int k=N%
-        <<N%10;
-        N=N/10;
+int main() {
+    int n;
+    cin>>n;
+    int rev=0;
+    while(n!=0){
+        int k=n%10;
+        rev=rev*10+k;
+        n/=10;
     }
-    cout<<Reverse<<endl;
+    cout<<rev<<endl;
     return 0;
 }
