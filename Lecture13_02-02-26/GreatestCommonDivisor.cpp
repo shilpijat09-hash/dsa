@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int gcd(int a,int b){
+ int gcd(int a,int b){
     while(b!=0){
         int t=a%b;
         a=b;
@@ -20,4 +20,4 @@ int main(){
     cout<<a<<endl;
     cout<<gcd(a,b);
     return 0;
-} 
+}
