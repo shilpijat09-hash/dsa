@@ -1,17 +1,16 @@
 #include<iostream>
 #include<cmath>
-using namespace std;
-int main(){
-int Min;
-cin>>Min;
-int Max;
-cin>>Max;
-int Step;
-cin>>Step;
-int k=(Min+Max/Step)+1;
-	for(int F=0;F<=Max;F=F+20){
-		int C=(5/9)*(F-32);
-		cout<<C;
-		}
-    return 0;
+using namespace std ;
+int main() {
+	int min;
+	cin>>min;
+	int max;
+	cin>>max;
+	int step;
+	cin>>step;
+	for(int F=min;F<=max;F+=step){
+	int celsius = (F - 32.0) * 5.0 / 9.0;
+	cout<<F<<" "<<celsius<<endl;
+	}
+	return 0;
 }

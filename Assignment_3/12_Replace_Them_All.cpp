@@ -3,20 +3,18 @@ using namespace std;
 int main() {
 	int n;
 	cin>>n;
-int odd=0;
-int even=0;
 int p=1;//position
 while(n>0){
 int digit=n%10;
-if(p%2==1){
-	odd=odd+digit;
+if(p!=0){
+	cout<<0;
 }
 else{
-	even=even+digit;
+	cout<<5;
 }
 n=n/10;
 p++;
 }
-cout<<odd<<endl;
-cout<<even<<endl;
+cout<<0<<endl;
+cout<<5<<endl;
 }
