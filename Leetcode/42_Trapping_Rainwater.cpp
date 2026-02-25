@@ -34,6 +34,7 @@ int main() {
     
     return 0;
 }
+// dusre tarike se
 //  int trap(vector<int>& height) {
 //        int n = height.size();
 //     int left = 0 , right = n-1;
