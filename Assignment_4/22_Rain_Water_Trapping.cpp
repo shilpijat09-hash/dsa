@@ -4,19 +4,25 @@
 using namespace std;
  int trap(vector<int>& height) {
     int n=height.size();
-    vector<int>leftmax(n,0);
-    vector<int>rightmax(n,0);
-    leftmax[0]=height[0];
-    rightmax[n-1]=height[n-1];
-    for(int i=1;i<n;i++){
-        leftmax[i]=max(leftmax[i-1],height[i]);
+int ans=0;
+int left=0;
+int right=n-1;
+int leftmax=0,rightmax=0;
+while(left<right){
+    leftmax=max(leftmax,height[left]);
+    rightmax=max(rightmax,height[right]);
+    if(leftmax<rightmax){
+        ans+=leftmax-height[left];
+        left++;
     }
-    for(int i=n-2;i>=0;i--){
-        rightmax[i]=max(rightmax[i+1],height[i]);
+    else{
+ans+=rightmax-height[right];
+        right--;
     }
-    int ans=0;
-    for(int i=0;i<n;i++){
-        ans+=min(leftmax[i],rightmax[i])-height[i];
-    }
-    return ans;
+}
+return ans;
+ }
+    int main(){
+
+return 0;
 }
