@@ -23,6 +23,16 @@ ans+=rightmax-height[right];
 return ans;
  }
     int main(){
-
+     int testcase;
+    cin>>testcase;
+    while (testcase--) {
+        int n;
+        cin>>n;
+        vector<int> height(n);
+        for (int i=0;i<n;i++) {
+            cin>>height[i];
+        }
+        cout<<trap(height)<<endl;
+    }
 return 0;
 }
