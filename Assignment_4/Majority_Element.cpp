@@ -7,11 +7,12 @@ int majorityElement(vector<int>& nums) {
     return nums[nums.size()/2];
 }
 int main() {
-    int N;
-    cin>>N;
-    vector<int> nums={1,1,2};
-     for(int i = 0; i < N; i++){
+	int n;
+	cin>>n;
+    vector<int> nums(n);
+	for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
     cout<<majorityElement(nums)<<endl;
-	}
     return 0;
 }
